@@ -7,7 +7,7 @@ from torch.autograd import Variable
 import matplotlib.pyplot as plt
 
 x = torch.unsqueeze(torch.linspace(-1, 1, 1000), dim=1)
-y = x.pow(2) + torch.rand(x.size())
+y = x.pow(2) + 0.1 * torch.rand(x.size())
 
 torch_dataset = Data.TensorDataset(data_tensor=x, target_tensor=y)
 loader = Data.DataLoader(
